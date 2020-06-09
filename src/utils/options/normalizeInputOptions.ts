@@ -1,5 +1,6 @@
 import injectClassFields from 'acorn-class-fields';
 import injectImportMeta from 'acorn-import-meta';
+import injectNumericSeparator from 'acorn-numeric-separator';
 import injectStaticClassFeatures from 'acorn-static-class-features';
 import {
 	ExternalOption,
@@ -117,6 +118,7 @@ const getAcornInjectPlugins = (config: GenericConfigObject): Function[] => [
 	injectImportMeta,
 	injectClassFields,
 	injectStaticClassFeatures,
+	injectNumericSeparator,
 	...(ensureArray(config.acornInjectPlugins) as any)
 ];
 
